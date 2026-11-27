@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Yasin Mondal - Beginner Data Entry and Excel Assistant from West Bengal, India.">
+<meta name="description" content="Yasin Mondal is a beginner Data Entry Assistant from Nadia, West Bengal, India, learning Microsoft Excel, Google Sheets, data formatting and PDF to Excel.">
+<meta name="theme-color" content="#070d1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yasin Mondal | Data Entry & Excel Assistant">
+<meta property="og:description" content="Careful data entry, Excel and Google Sheets practice by Yasin Mondal.">
+<link rel="preload" as="image" href="profile.jpg" fetchpriority="high">
 <title>Yasin Mondal | Data Entry & Excel Assistant</title>
 
 <style>
@@ -426,6 +431,18 @@ footer {
     .menu-btn { display: block; }
 }
 
+/* ---------- ACCESSIBILITY & PERFORMANCE ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
@@ -506,7 +523,7 @@ footer {
 
         <div class="photo-area">
             <div class="photo-ring">
-                <img src="profile.jpg" alt="Yasin Mondal">
+                <img src="profile.jpg" alt="Yasin Mondal" width="310" height="310" loading="eager" fetchpriority="high" decoding="async">
             </div>
 
             <div class="float-card fc1 mini-sheet">

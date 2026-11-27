@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Yasin Mondal - Data Entry Assistant, Excel Learner and E-commerce Data Support.">
-
 <title>Yasin Mondal | Professional Portfolio</title>
 
 <style>
@@ -88,9 +87,7 @@ section { padding: 85px 0; }
     gap: 55px;
 }
 
-.hero-text {
-    max-width: 680px;
-}
+.hero-text { max-width: 680px; }
 
 .eyebrow {
     display: inline-block;
@@ -160,7 +157,7 @@ h1 span { color: #43d6c5; }
     color: #07131d;
 }
 
-/* PROFILE PHOTO */
+/* MAIN PROFILE PHOTO */
 
 .profile-area {
     display: flex;
@@ -268,7 +265,7 @@ h2 span { color: #43d6c5; }
 
 .contact-links a:hover { text-decoration: underline; }
 
-/* CONTACT HEADING AND CENTER PHOTO */
+/* CONTACT HEADING AND MEDIUM CIRCULAR PHOTO */
 
 .contact-heading-row {
     display: grid;
@@ -283,14 +280,19 @@ h2 span { color: #43d6c5; }
 
 .contact-photo {
     display: block;
-    width: 75px;
-    height: 75px;
+    width: 92px;
+    height: 92px;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
     border: 2px solid #43d6c5;
-    padding: 3px;
+    padding: 2px;
     margin: 0 auto;
+    box-shadow:
+        0 0 10px rgba(67,214,197,.25),
+        0 0 22px rgba(67,214,197,.10);
+    background: #121f32;
+    image-rendering: auto;
     visibility: visible;
     opacity: 1;
 }
@@ -311,17 +313,11 @@ footer {
         gap: 25px;
     }
 
-    .profile-card {
-        max-width: 300px;
-    }
+    .profile-card { max-width: 300px; }
 
-    h1 {
-        font-size: clamp(34px, 5vw, 48px);
-    }
+    h1 { font-size: clamp(34px, 5vw, 48px); }
 
-    .hero-description {
-        font-size: 15px;
-    }
+    .hero-description { font-size: 15px; }
 }
 
 /* MOBILE */
@@ -393,9 +389,7 @@ footer {
         font-size: 11px;
     }
 
-    .profile-area {
-        justify-content: center;
-    }
+    .profile-area { justify-content: center; }
 
     .profile-card {
         max-width: 100%;
@@ -410,9 +404,7 @@ footer {
         object-fit: contain;
     }
 
-    .profile-info {
-        padding: 9px 2px 4px;
-    }
+    .profile-info { padding: 9px 2px 4px; }
 
     .profile-name { font-size: 14px; }
 
@@ -427,13 +419,11 @@ footer {
         gap: 5px;
     }
 
-    .contact-heading-row h2 {
-        font-size: 24px;
-    }
+    .contact-heading-row h2 { font-size: 24px; }
 
     .contact-photo {
-        width: 60px;
-        height: 60px;
+        width: 72px;
+        height: 72px;
     }
 }
 </style>
@@ -455,8 +445,6 @@ footer {
 </header>
 
 <main>
-
-<!-- HOME -->
 
 <section class="hero" id="home">
     <div class="container hero-content">
@@ -485,31 +473,20 @@ footer {
 
         <div class="profile-area">
             <div class="profile-card">
-
-                <img
-                    src="profile.jpg"
-                    alt="Yasin Mondal"
-                    class="profile-photo"
-                >
+                <img src="profile.jpg" alt="Yasin Mondal" class="profile-photo">
 
                 <div class="profile-info">
                     <p class="profile-name">Yasin Mondal</p>
-                    <p class="profile-role">
-                        Data Entry & Excel Learner
-                    </p>
+                    <p class="profile-role">Data Entry & Excel Learner</p>
                 </div>
-
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- ABOUT -->
-
 <section id="about">
     <div class="container">
-
         <h2>About <span>Me</span></h2>
 
         <p class="muted">
@@ -521,15 +498,11 @@ footer {
             information. I am interested in supporting e-commerce
             and online business tasks as I continue to build my experience.
         </p>
-
     </div>
 </section>
 
-<!-- SKILLS -->
-
 <section id="skills">
     <div class="container">
-
         <h2>My <span>Skills</span></h2>
 
         <div class="skills">
@@ -541,15 +514,11 @@ footer {
             <span class="skill">PDF Conversion - Learning</span>
             <span class="skill">E-commerce Data Support - Learning</span>
         </div>
-
     </div>
 </section>
 
-<!-- PORTFOLIO -->
-
 <section id="portfolio">
     <div class="container">
-
         <h2>Practice <span>Portfolio</span></h2>
 
         <p class="muted" style="margin-bottom:25px">
@@ -595,15 +564,11 @@ footer {
     </div>
 </section>
 
-<!-- JOURNEY -->
-
 <section id="journey">
     <div class="container">
-
         <h2>My Learning <span>Journey</span></h2>
 
         <div class="card">
-
             <h3>Education</h3>
             <p class="muted">
                 Madhyamik, West Bengal Board of Madrasah Education - 2022
@@ -624,18 +589,14 @@ footer {
                 through continuous learning, practical experience
                 and honest work.
             </p>
-
         </div>
     </div>
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
     <div class="container">
 
         <div class="contact-heading-row">
-
             <h2>Let's <span>Connect</span></h2>
 
             <img
@@ -645,7 +606,6 @@ footer {
             >
 
             <div aria-hidden="true"></div>
-
         </div>
 
         <p class="muted" style="margin-bottom:22px">

@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Yasin Mondal - Entry-Level Data Entry Assistant, Excel Learner and E-commerce Data Support.">
+<meta name="description" content="Yasin Mondal - Data Entry Assistant, Excel Learner and E-commerce Data Support.">
 
 <title>Yasin Mondal | Professional Portfolio</title>
 
@@ -15,9 +14,7 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: Arial, sans-serif;
@@ -30,8 +27,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
-/* HEADER */
 
 header {
     position: sticky;
@@ -66,9 +61,7 @@ nav a {
     transition: .3s;
 }
 
-nav a:hover {
-    color: #43d6c5;
-}
+nav a:hover { color: #43d6c5; }
 
 .container {
     width: 86%;
@@ -76,29 +69,23 @@ nav a:hover {
     margin: auto;
 }
 
-section {
-    padding: 85px 0;
-}
+section { padding: 85px 0; }
 
-/* HOME HERO */
+/* HOME SECTION */
 
 .hero {
     min-height: 85vh;
     display: flex;
     align-items: center;
+    background: linear-gradient(115deg, #0a1220 55%, #10283a 100%);
     padding: 70px 0;
-    background: linear-gradient(
-        115deg,
-        #0a1220 55%,
-        #10283a 100%
-    );
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.25fr .9fr;
+    grid-template-columns: 1.2fr .8fr;
     align-items: center;
-    gap: 65px;
+    gap: 55px;
 }
 
 .hero-text {
@@ -117,18 +104,16 @@ section {
 
 h1 {
     font-size: clamp(42px, 5.5vw, 66px);
-    line-height: 1.15;
+    line-height: 1.13;
     font-weight: 700;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     letter-spacing: -1.5px;
 }
 
-h1 span {
-    color: #43d6c5;
-}
+h1 span { color: #43d6c5; }
 
 .hero-title {
-    font-size: clamp(20px, 2.5vw, 27px);
+    font-size: clamp(19px, 2.3vw, 26px);
     font-weight: 600;
     color: #dce8f5;
     margin-bottom: 18px;
@@ -181,16 +166,15 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
 .profile-card {
     width: 100%;
-    max-width: 370px;
-    padding: 16px;
+    max-width: 350px;
     background: #121f32;
+    padding: 13px;
     border: 1px solid #29485b;
-    border-radius: 20px;
+    border-radius: 18px;
     box-shadow: 0 20px 55px rgba(0,0,0,.35);
 }
 
@@ -198,16 +182,15 @@ h1 span {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 430px;
+    max-height: 440px;
     object-fit: contain;
     object-position: center;
-    border-radius: 13px;
-    background: #0a1220;
+    border-radius: 12px;
 }
 
 .profile-info {
     text-align: center;
-    padding: 16px 5px 5px;
+    padding: 15px 5px 7px;
 }
 
 .profile-name {
@@ -221,46 +204,20 @@ h1 span {
     font-size: 14px;
 }
 
-/* ABOUT AND SECTIONS */
+/* COMMON SECTIONS */
 
 h2 {
     font-size: 32px;
     margin-bottom: 22px;
 }
 
-h2 span {
-    color: #43d6c5;
-}
+h2 span { color: #43d6c5; }
 
-.muted {
-    color: #bac8d9;
-}
-
-/* SKILLS */
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.skill {
-    background: #1b3045;
-    color: #dce9f5;
-    padding: 9px 16px;
-    border-radius: 25px;
-    font-size: 14px;
-    border: 1px solid #293b51;
-}
-
-/* PORTFOLIO CARDS */
+.muted { color: #bac8d9; }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -282,11 +239,22 @@ h2 span {
     margin-bottom: 10px;
 }
 
-.card p {
-    color: #bac8d9;
+.card p { color: #bac8d9; }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-/* CONTACT */
+.skill {
+    background: #1b3045;
+    color: #dce9f5;
+    padding: 9px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    border: 1px solid #293b51;
+}
 
 .contact-links {
     display: grid;
@@ -298,11 +266,21 @@ h2 span {
     overflow-wrap: anywhere;
 }
 
-.contact-links a:hover {
-    text-decoration: underline;
-}
+.contact-links a:hover { text-decoration: underline; }
 
-/* FOOTER */
+/* SMALL ROUND CONTACT PHOTO */
+
+.contact-photo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #43d6c5;
+    padding: 3px;
+    margin: 0 auto 22px;
+}
 
 footer {
     text-align: center;
@@ -314,43 +292,28 @@ footer {
 
 /* TABLET */
 
-@media (max-width: 850px) {
-
+@media(max-width: 850px) {
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-
-    .hero-text {
-        margin: auto;
-    }
-
-    .hero-description {
-        margin: auto;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .profile-area {
-        order: -1;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 25px;
     }
 
     .profile-card {
-        max-width: 320px;
+        max-width: 300px;
     }
 
-    .hero {
-        min-height: auto;
+    h1 {
+        font-size: clamp(34px, 5vw, 48px);
+    }
+
+    .hero-description {
+        font-size: 15px;
     }
 }
 
 /* MOBILE */
 
-@media (max-width: 600px) {
-
+@media(max-width: 600px) {
     header {
         padding: 15px 5%;
         justify-content: center;
@@ -361,61 +324,102 @@ footer {
         gap: 13px;
     }
 
-    nav a {
-        font-size: 13px;
+    nav a { font-size: 13px; }
+
+    .container { width: 90%; }
+
+    section { padding: 60px 0; }
+
+    .hero {
+        min-height: auto;
+        padding: 45px 0;
     }
 
-    .container {
-        width: 90%;
+    .hero-content {
+        grid-template-columns: 1.05fr .85fr;
+        gap: 12px;
+        align-items: center;
     }
 
-    section {
-        padding: 60px 0;
+    .hero-text {
+        text-align: left;
+        min-width: 0;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
     }
 
     h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 28px;
+        font-size: clamp(27px, 7.5vw, 36px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin-bottom: 12px;
     }
 
     .hero-title {
-        font-size: 21px;
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 12px;
     }
 
     .hero-description {
-        font-size: 15px;
+        font-size: 12px;
+        line-height: 1.7;
     }
 
-    .profile-card {
-        max-width: 280px;
-        padding: 12px;
-    }
-
-    .profile-photo {
-        max-height: 380px;
-    }
-
-    .card {
-        padding: 20px;
+    .buttons {
+        gap: 8px;
+        margin-top: 18px;
     }
 
     .buttons .btn {
-        padding: 12px 18px;
+        padding: 10px 11px;
+        font-size: 11px;
+    }
+
+    .profile-area {
+        justify-content: center;
+    }
+
+    .profile-card {
+        max-width: 100%;
+        padding: 7px;
+        border-radius: 12px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    .profile-info {
+        padding: 9px 2px 4px;
+    }
+
+    .profile-name { font-size: 14px; }
+
+    .profile-role { font-size: 10px; }
+
+    h2 { font-size: 28px; }
+
+    .card { padding: 20px; }
+
+    .contact-photo {
+        width: 70px;
+        height: 70px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
     <div class="logo">YASIN MONDAL</div>
 
     <nav>
@@ -426,7 +430,6 @@ footer {
         <a href="#journey">Journey</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
 <main>
@@ -434,18 +437,13 @@ footer {
 <!-- HOME -->
 
 <section class="hero" id="home">
-
     <div class="container hero-content">
 
         <div class="hero-text">
 
-            <p class="eyebrow">
-                Welcome to my portfolio
-            </p>
+            <p class="eyebrow">Welcome to my portfolio</p>
 
-            <h1>
-                I'm <span>Yasin Mondal</span>
-            </h1>
+            <h1>I'm <span>Yasin Mondal</span></h1>
 
             <h2 class="hero-title">
                 Entry-Level Data Entry Assistant
@@ -459,21 +457,13 @@ footer {
             </p>
 
             <div class="buttons">
-
-                <a class="btn" href="#portfolio">
-                    Explore My Work
-                </a>
-
-                <a class="btn btn-outline" href="#contact">
-                    Contact Me
-                </a>
-
+                <a class="btn" href="#portfolio">Explore My Work</a>
+                <a class="btn btn-outline" href="#contact">Contact Me</a>
             </div>
 
         </div>
 
         <div class="profile-area">
-
             <div class="profile-card">
 
                 <img
@@ -483,29 +473,21 @@ footer {
                 >
 
                 <div class="profile-info">
-
-                    <p class="profile-name">
-                        Yasin Mondal
-                    </p>
-
+                    <p class="profile-name">Yasin Mondal</p>
                     <p class="profile-role">
                         Data Entry & Excel Learner
                     </p>
-
                 </div>
 
             </div>
-
         </div>
 
     </div>
-
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-
     <div class="container">
 
         <h2>About <span>Me</span></h2>
@@ -521,55 +503,31 @@ footer {
         </p>
 
     </div>
-
 </section>
 
 <!-- SKILLS -->
 
 <section id="skills">
-
     <div class="container">
 
         <h2>My <span>Skills</span></h2>
 
         <div class="skills">
-
             <span class="skill">Data Entry</span>
-
-            <span class="skill">
-                Microsoft Excel - Basic
-            </span>
-
-            <span class="skill">
-                Google Sheets - Basic
-            </span>
-
-            <span class="skill">
-                Spreadsheet Formatting
-            </span>
-
-            <span class="skill">
-                Data Organization
-            </span>
-
-            <span class="skill">
-                PDF Conversion - Learning
-            </span>
-
-            <span class="skill">
-                E-commerce Data Support - Learning
-            </span>
-
+            <span class="skill">Microsoft Excel - Basic</span>
+            <span class="skill">Google Sheets - Basic</span>
+            <span class="skill">Spreadsheet Formatting</span>
+            <span class="skill">Data Organization</span>
+            <span class="skill">PDF Conversion - Learning</span>
+            <span class="skill">E-commerce Data Support - Learning</span>
         </div>
 
     </div>
-
 </section>
 
 <!-- PORTFOLIO -->
 
 <section id="portfolio">
-
     <div class="container">
 
         <h2>Practice <span>Portfolio</span></h2>
@@ -614,15 +572,12 @@ footer {
             </div>
 
         </div>
-
     </div>
-
 </section>
 
-<!-- LEARNING JOURNEY -->
+<!-- JOURNEY -->
 
 <section id="journey">
-
     <div class="container">
 
         <h2>My Learning <span>Journey</span></h2>
@@ -630,7 +585,6 @@ footer {
         <div class="card">
 
             <h3>Education</h3>
-
             <p class="muted">
                 Madhyamik, West Bengal Board of Madrasah Education - 2022
             </p>
@@ -638,7 +592,6 @@ footer {
             <br>
 
             <h3>Languages</h3>
-
             <p class="muted">
                 Bengali - Native | Hindi - Basic | English - Beginner
             </p>
@@ -646,25 +599,29 @@ footer {
             <br>
 
             <h3>My Goal</h3>
-
             <p class="muted">
-                To become a skilled and reliable professional through
-                continuous learning, practical experience and honest work.
+                To become a skilled and reliable professional
+                through continuous learning, practical experience
+                and honest work.
             </p>
 
         </div>
-
     </div>
-
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-
     <div class="container">
 
         <h2>Let's <span>Connect</span></h2>
+
+        <!-- SMALL CENTERED PHOTO -->
+        <img
+            src="profile.jpg"
+            alt="Yasin Mondal"
+            class="contact-photo"
+        >
 
         <p class="muted" style="margin-bottom:22px">
             Feel free to connect with me through the links below.
@@ -681,42 +638,29 @@ footer {
 
             <p>
                 LinkedIn:
-                <a
-                    href="https://www.linkedin.com/in/yasin-mondal-002207449/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com/in/yasin-mondal-002207449/"
+                   target="_blank" rel="noopener noreferrer">
                     View LinkedIn Profile
                 </a>
             </p>
 
             <p>
                 Freelancer:
-                <a
-                    href="https://www.freelancer.in/u/DataEntryYasin85"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.freelancer.in/u/DataEntryYasin85"
+                   target="_blank" rel="noopener noreferrer">
                     View Freelancer Profile
                 </a>
             </p>
 
         </div>
-
     </div>
-
 </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
-
     <p>© 2026 Yasin Mondal. All rights reserved.</p>
-
     <p>Learning Today. Improving Every Day.</p>
-
 </footer>
 
 </body>

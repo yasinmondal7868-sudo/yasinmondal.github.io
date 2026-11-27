@@ -268,7 +268,18 @@ h2 span { color: #43d6c5; }
 
 .contact-links a:hover { text-decoration: underline; }
 
-/* SMALL ROUND CONTACT PHOTO */
+/* CONTACT HEADING AND CENTER PHOTO */
+
+.contact-heading-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.contact-heading-row h2 {
+    margin-bottom: 0;
+}
 
 .contact-photo {
     display: block;
@@ -279,7 +290,9 @@ h2 span { color: #43d6c5; }
     border-radius: 50%;
     border: 2px solid #43d6c5;
     padding: 3px;
-    margin: 0 auto 22px;
+    margin: 0 auto;
+    visibility: visible;
+    opacity: 1;
 }
 
 footer {
@@ -409,9 +422,18 @@ footer {
 
     .card { padding: 20px; }
 
+    .contact-heading-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    .contact-heading-row h2 {
+        font-size: 24px;
+    }
+
     .contact-photo {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
 </style>
@@ -440,10 +462,9 @@ footer {
     <div class="container hero-content">
 
         <div class="hero-text">
-
             <p class="eyebrow">Welcome to my portfolio</p>
 
-            <h1>I'm <span>Yasin Mondal</span></h1>
+            <h1>I am <span>Yasin Mondal</span></h1>
 
             <h2 class="hero-title">
                 Entry-Level Data Entry Assistant
@@ -460,7 +481,6 @@ footer {
                 <a class="btn" href="#portfolio">Explore My Work</a>
                 <a class="btn btn-outline" href="#contact">Contact Me</a>
             </div>
-
         </div>
 
         <div class="profile-area">
@@ -614,14 +634,19 @@ footer {
 <section id="contact">
     <div class="container">
 
-        <h2>Let's <span>Connect</span></h2>
+        <div class="contact-heading-row">
 
-        <!-- SMALL CENTERED PHOTO -->
-        <img
-            src="profile.jpg"
-            alt="Yasin Mondal"
-            class="contact-photo"
-        >
+            <h2>Let's <span>Connect</span></h2>
+
+            <img
+                src="profile.jpg"
+                alt="Yasin Mondal"
+                class="contact-photo"
+            >
+
+            <div aria-hidden="true"></div>
+
+        </div>
 
         <p class="muted" style="margin-bottom:22px">
             Feel free to connect with me through the links below.

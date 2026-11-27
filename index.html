@@ -1,140 +1,577 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Yasin Mondal - Entry-Level Data Entry Assistant and Excel Learner.">
+<meta name="description" content="Yasin Mondal - Data Entry Assistant, Excel Learner and E-commerce Data Support.">
+
 <title>Yasin Mondal | Professional Portfolio</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#0a1220;color:#edf4fc;line-height:1.7}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:10;background:#101c2e;border-bottom:1px solid #26364b;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.logo{font-size:21px;font-weight:bold;color:#43d6c5}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{font-size:14px;color:#d4deeb}
-nav a:hover{color:#43d6c5}
-.container{width:86%;max-width:1100px;margin:auto}
-section{padding:75px 0}
-.hero{min-height:78vh;display:flex;align-items:center}
-.tag{color:#43d6c5;letter-spacing:2px;font-weight:bold}
-h1{font-size:clamp(40px,7vw,68px);line-height:1.15;margin:18px 0}
-h1 span,h2 span{color:#43d6c5}
-h2{font-size:32px;margin-bottom:22px}
-h3{color:#43d6c5;margin-bottom:10px}
-.intro{max-width:680px;color:#bac8d9;font-size:18px}
-.muted{color:#bac8d9}
-.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:12px 22px;border-radius:7px;background:#43d6c5;color:#07131d;font-weight:bold}
-.secondary{background:transparent;color:#43d6c5;border:1px solid #43d6c5}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#121f32;border:1px solid #293b51;border-radius:12px;padding:23px}
-.card p{color:#bac8d9}
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{background:#1b3045;color:#dce9f5;padding:8px 14px;border-radius:25px;font-size:14px}
-.contact-links{display:grid;gap:14px}
-.contact-links a{color:#43d6c5;overflow-wrap:anywhere}
-footer{text-align:center;padding:25px;color:#9eafc4;border-top:1px solid #293b51}
-@media(max-width:600px){header{padding:15px 5%}nav{gap:12px}.container{width:90%}section{padding:55px 0}}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a1220;
+    color: #edf4fc;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #101c2e;
+    border-bottom: 1px solid #26364b;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #43d6c5;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 14px;
+    color: #d4deeb;
+    transition: .3s;
+}
+
+nav a:hover { color: #43d6c5; }
+
+.container {
+    width: 86%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+section { padding: 85px 0; }
+
+/* PREMIUM HERO */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(115deg, #0a1220 55%, #10283a 100%);
+    padding: 70px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.3fr .8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-text { max-width: 680px; }
+
+.eyebrow {
+    display: inline-block;
+    color: #43d6c5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(42px, 5.5vw, 66px);
+    line-height: 1.13;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+h1 span { color: #43d6c5; }
+
+.hero-title {
+    font-size: clamp(20px, 2.5vw, 27px);
+    font-weight: 600;
+    color: #dce8f5;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    color: #bac8d9;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 570px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    background: #43d6c5;
+    color: #07131d;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #6aebdc;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #43d6c5;
+    border: 1px solid #43d6c5;
+}
+
+.btn-outline:hover {
+    background: #43d6c5;
+    color: #07131d;
+}
+
+/* PROFILE */
+
+.profile-area {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 335px;
+    background: #121f32;
+    padding: 13px;
+    border: 1px solid #29485b;
+    border-radius: 18px;
+    box-shadow: 0 20px 55px rgba(0,0,0,.35);
+}
+
+.profile-photo {
+    display: block;
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.profile-info {
+    text-align: center;
+    padding: 15px 5px 7px;
+}
+
+.profile-name {
+    font-size: 21px;
+    font-weight: bold;
+    color: #43d6c5;
+}
+
+.profile-role {
+    color: #bac8d9;
+    font-size: 14px;
+}
+
+/* COMMON SECTIONS */
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+h2 span { color: #43d6c5; }
+
+.muted { color: #bac8d9; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #121f32;
+    border: 1px solid #293b51;
+    border-radius: 12px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #43d6c5;
+}
+
+.card h3 {
+    color: #43d6c5;
+    margin-bottom: 10px;
+}
+
+.card p { color: #bac8d9; }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #1b3045;
+    color: #dce9f5;
+    padding: 9px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    border: 1px solid #293b51;
+}
+
+.contact-links {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-links a {
+    color: #43d6c5;
+    overflow-wrap: anywhere;
+}
+
+.contact-links a:hover { text-decoration: underline; }
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    color: #9eafc4;
+    background: #101c2e;
+    border-top: 1px solid #293b51;
+}
+
+/* TABLET */
+
+@media(max-width: 850px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero-text { margin: auto; }
+
+    .hero-description { margin: auto; }
+
+    .buttons { justify-content: center; }
+
+    .profile-area { order: -1; }
+
+    .profile-card { max-width: 285px; }
+
+    .profile-photo { height: 300px; }
+
+    .hero { min-height: auto; }
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+    header {
+        padding: 15px 5%;
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a { font-size: 13px; }
+
+    .container { width: 90%; }
+
+    section { padding: 60px 0; }
+
+    h1 { font-size: 40px; }
+
+    h2 { font-size: 28px; }
+
+    .hero-title { font-size: 21px; }
+
+    .hero-description { font-size: 15px; }
+
+    .profile-card { max-width: 250px; }
+
+    .profile-photo { height: 260px; }
+
+    .card { padding: 20px; }
+
+    .buttons .btn { padding: 12px 18px; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="logo">YASIN MONDAL</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#journey">Journey</a>
-<a href="#contact">Contact</a>
-</nav>
+    <div class="logo">YASIN MONDAL</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <main>
+
+<!-- HOME -->
+
 <section class="hero" id="home">
-<div class="container">
-<img src="profile.jpg" alt="Yasin Mondal" style="width:130px;height:130px;border-radius:50%;object-fit:cover;border:3px solid #43d6c5;margin-bottom:16px;">
-<p class="tag">WELCOME TO MY PORTFOLIO</p>
-<h1>Hello, I'm <span>Yasin Mondal</span></h1>
-<h2>Entry-Level Data Entry Assistant</h2>
-<p class="intro">I am developing practical skills in Data Entry, Microsoft Excel, Google Sheets and E-commerce Data Support. I believe in accuracy, continuous learning and professional growth.</p>
-<div class="buttons">
-<a class="btn" href="#portfolio">Explore My Work</a>
-<a class="btn secondary" href="#contact">Contact Me</a>
-</div>
-</div>
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">Welcome to my portfolio</p>
+
+            <h1>Hello, I'm <span>Yasin Mondal</span></h1>
+
+            <h2 class="hero-title">
+                Entry-Level Data Entry Assistant
+            </h2>
+
+            <p class="hero-description">
+                I am developing practical skills in Data Entry,
+                Microsoft Excel, Google Sheets and E-commerce
+                Data Support. I believe in accuracy, continuous
+                learning and professional growth.
+            </p>
+
+            <div class="buttons">
+                <a class="btn" href="#portfolio">Explore My Work</a>
+                <a class="btn btn-outline" href="#contact">Contact Me</a>
+            </div>
+
+        </div>
+
+        <div class="profile-area">
+            <div class="profile-card">
+
+                <img
+                    src="profile.jpg"
+                    alt="Yasin Mondal"
+                    class="profile-photo"
+                >
+
+                <div class="profile-info">
+                    <p class="profile-name">Yasin Mondal</p>
+                    <p class="profile-role">
+                        Data Entry & Excel Learner
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
-<div class="container">
-<h2>About <span>Me</span></h2>
-<p class="muted">I am an aspiring Data Entry Assistant from Nadia, West Bengal, India. I am at the beginning of my professional journey and improving my skills through regular practice. My current learning focuses on spreadsheet data entry, formatting and organizing information. I am interested in supporting e-commerce and online business tasks as I continue to build my experience.</p>
-</div>
+    <div class="container">
+
+        <h2>About <span>Me</span></h2>
+
+        <p class="muted">
+            I am an aspiring Data Entry Assistant from Nadia,
+            West Bengal, India. I am at the beginning of my
+            professional journey and improving my skills through
+            regular practice. My current learning focuses on
+            spreadsheet data entry, formatting and organizing
+            information. I am interested in supporting e-commerce
+            and online business tasks as I continue to build my experience.
+        </p>
+
+    </div>
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
-<div class="container">
-<h2>My <span>Skills</span></h2>
-<div class="skills">
-<span class="skill">Data Entry</span>
-<span class="skill">Microsoft Excel - Basic</span>
-<span class="skill">Google Sheets - Basic</span>
-<span class="skill">Spreadsheet Formatting</span>
-<span class="skill">Data Organization</span>
-<span class="skill">PDF Conversion - Learning</span>
-<span class="skill">E-commerce Data Support - Learning</span>
-</div>
-</div>
+    <div class="container">
+
+        <h2>My <span>Skills</span></h2>
+
+        <div class="skills">
+            <span class="skill">Data Entry</span>
+            <span class="skill">Microsoft Excel - Basic</span>
+            <span class="skill">Google Sheets - Basic</span>
+            <span class="skill">Spreadsheet Formatting</span>
+            <span class="skill">Data Organization</span>
+            <span class="skill">PDF Conversion - Learning</span>
+            <span class="skill">E-commerce Data Support - Learning</span>
+        </div>
+
+    </div>
 </section>
+
+<!-- PORTFOLIO -->
 
 <section id="portfolio">
-<div class="container">
-<h2>Practice <span>Portfolio</span></h2>
-<p class="muted" style="margin-bottom:22px">These are practice areas from my personal learning journey. They are not paid client projects.</p>
-<div class="grid">
-<div class="card"><h3>Excel Data Entry</h3><p>Practice entering and organizing information in spreadsheet tables.</p></div>
-<div class="card"><h3>Data Formatting</h3><p>Practice arranging spreadsheet information in a clear and readable format.</p></div>
-<div class="card"><h3>Google Sheets</h3><p>Learning spreadsheet organization and basic data management.</p></div>
-<div class="card"><h3>E-commerce Data</h3><p>Learning product records, order information and inventory data support.</p></div>
-</div>
-</div>
+    <div class="container">
+
+        <h2>Practice <span>Portfolio</span></h2>
+
+        <p class="muted" style="margin-bottom:25px">
+            These are practice areas from my personal learning journey.
+            They are not paid client projects.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Excel Data Entry</h3>
+                <p>
+                    Practice entering and organizing information
+                    in spreadsheet tables.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Data Formatting</h3>
+                <p>
+                    Practice arranging spreadsheet information
+                    in a clear and readable format.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Google Sheets</h3>
+                <p>
+                    Learning spreadsheet organization and
+                    basic data management.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>E-commerce Data</h3>
+                <p>
+                    Learning product records, order information
+                    and inventory data support.
+                </p>
+            </div>
+
+        </div>
+    </div>
 </section>
+
+<!-- JOURNEY -->
 
 <section id="journey">
-<div class="container">
-<h2>My Learning <span>Journey</span></h2>
-<div class="card">
-<h3>Education</h3>
-<p class="muted">Madhyamik, West Bengal Board of Madrasah Education - 2022</p>
-<br>
-<h3>Languages</h3>
-<p class="muted">Bengali - Native | Hindi - Basic | English - Beginner</p>
-<br>
-<h3>My Goal</h3>
-<p class="muted">To become a skilled and reliable professional through continuous learning, practical experience and honest work.</p>
-</div>
-</div>
+    <div class="container">
+
+        <h2>My Learning <span>Journey</span></h2>
+
+        <div class="card">
+
+            <h3>Education</h3>
+            <p class="muted">
+                Madhyamik, West Bengal Board of Madrasah Education - 2022
+            </p>
+
+            <br>
+
+            <h3>Languages</h3>
+            <p class="muted">
+                Bengali - Native | Hindi - Basic | English - Beginner
+            </p>
+
+            <br>
+
+            <h3>My Goal</h3>
+            <p class="muted">
+                To become a skilled and reliable professional
+                through continuous learning, practical experience
+                and honest work.
+            </p>
+
+        </div>
+    </div>
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
-<div class="container">
-<h2>Let's <span>Connect</span></h2>
-<p class="muted" style="margin-bottom:22px">Feel free to connect with me through the links below.</p>
-<div class="contact-links">
-<p>Email: <a href="mailto:yasinmondal7868@gmail.com">yasinmondal7868@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/yasin-mondal-002207449/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a></p>
-<p>Freelancer: <a href="https://www.freelancer.in/u/DataEntryYasin85" target="_blank" rel="noopener noreferrer">View Freelancer Profile</a></p>
-</div>
-</div>
+    <div class="container">
+
+        <h2>Let's <span>Connect</span></h2>
+
+        <p class="muted" style="margin-bottom:22px">
+            Feel free to connect with me through the links below.
+        </p>
+
+        <div class="contact-links">
+
+            <p>
+                Email:
+                <a href="mailto:yasinmondal7868@gmail.com">
+                    yasinmondal7868@gmail.com
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/yasin-mondal-002207449/"
+                   target="_blank" rel="noopener noreferrer">
+                    View LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                Freelancer:
+                <a href="https://www.freelancer.in/u/DataEntryYasin85"
+                   target="_blank" rel="noopener noreferrer">
+                    View Freelancer Profile
+                </a>
+            </p>
+
+        </div>
+    </div>
 </section>
+
 </main>
 
 <footer>
-<p>© 2026 Yasin Mondal. All rights reserved.</p>
-<p>Learning Today. Improving Every Day.</p>
+    <p>© 2026 Yasin Mondal. All rights reserved.</p>
+    <p>Learning Today. Improving Every Day.</p>
 </footer>
+
 </body>
 </html>

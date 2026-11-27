@@ -3,639 +3,738 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Yasin Mondal - Data Entry Assistant, Excel Learner and E-commerce Data Support.">
-<title>Yasin Mondal | Professional Portfolio</title>
+<meta name="description" content="Yasin Mondal - Beginner Data Entry and Excel Assistant from West Bengal, India.">
+<title>Yasin Mondal | Data Entry & Excel Assistant</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #070d1a;
+    --bg2: #0d1628;
+    --card: #101b30;
+    --line: #22344e;
+    --text: #edf4fc;
+    --muted: #aebdd0;
+    --teal: #43d6c5;
+    --blue: #3b82f6;
+    --pink: #ec4899;
+    --violet: #8b5cf6;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0a1220;
-    color: #edf4fc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
+
+.container { width: 88%; max-width: 1150px; margin: auto; }
+
+section { padding: 90px 0; scroll-margin-top: 70px; }
+
+/* ---------- HEADER ---------- */
 
 header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #101c2e;
-    border-bottom: 1px solid #26364b;
-    padding: 17px 7%;
+    background: rgba(7, 13, 26, .88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 14px 0;
     gap: 15px;
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: bold;
-    color: #43d6c5;
-    letter-spacing: 1px;
-}
+.logo { display: flex; align-items: center; gap: 10px; }
 
-nav {
+.logo-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--blue), var(--pink));
     display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
 }
 
-nav a {
+.logo-text strong { display: block; font-size: 15px; line-height: 1.2; }
+.logo-text small { color: var(--muted); font-size: 11px; }
+
+nav { display: flex; gap: 24px; }
+
+nav a { font-size: 14px; color: #d4deeb; transition: .3s; }
+nav a:hover { color: var(--teal); }
+
+.nav-right { display: flex; align-items: center; gap: 12px; }
+
+.hire-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
     font-size: 14px;
-    color: #d4deeb;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--blue), var(--pink));
     transition: .3s;
 }
 
-nav a:hover { color: #43d6c5; }
+.hire-btn:hover { transform: translateY(-2px); opacity: .92; }
 
-.container {
-    width: 86%;
-    max-width: 1120px;
-    margin: auto;
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-size: 22px;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-section { padding: 85px 0; }
-
-/* HOME SECTION */
+/* ---------- HERO ---------- */
 
 .hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(115deg, #0a1220 55%, #10283a 100%);
-    padding: 70px 0;
+    position: relative;
+    padding: 80px 0 90px;
+    background:
+        radial-gradient(circle at 18% 25%, rgba(139, 92, 246, .22), transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(59, 130, 246, .22), transparent 42%),
+        var(--bg);
 }
 
-.hero-content {
+.hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 50px;
     align-items: center;
-    gap: 55px;
 }
 
-.hero-text { max-width: 680px; }
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #d4deeb;
+    margin-bottom: 22px;
+}
 
-.eyebrow {
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.hello { font-size: 22px; color: var(--muted); }
+
+h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin: 4px 0 14px;
+}
+
+.role { font-size: clamp(20px, 2.6vw, 28px); font-weight: 600; margin-bottom: 18px; }
+
+.role span { color: var(--teal); border-right: 3px solid var(--teal); padding-right: 4px; }
+
+.hero-desc { color: var(--muted); max-width: 560px; font-size: 16px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+.chip {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.c1 { background: #0ea5e9; }
+.c2 { background: #16a34a; }
+.c3 { background: #d97706; }
+.c4 { background: #7c3aed; }
+.c5 { background: #db2777; }
+
+.buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+.btn {
     display: inline-block;
-    color: #43d6c5;
+    padding: 13px 26px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-main { background: linear-gradient(90deg, var(--blue), var(--pink)); }
+.btn-main:hover { transform: translateY(-3px); }
+
+.btn-line { border: 1px solid var(--line); background: var(--card); }
+.btn-line:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ---------- ROUND PHOTO ---------- */
+
+.photo-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+}
+
+.photo-ring {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--blue), var(--violet), var(--pink));
+    box-shadow: 0 0 45px rgba(139, 92, 246, .35);
+}
+
+.photo-ring img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    background: var(--card);
+    border: 5px solid var(--bg);
+}
+
+.float-card {
+    position: absolute;
+    background: rgba(16, 27, 48, .95);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 11px 16px;
+    font-size: 13px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+
+.float-card strong { display: block; color: var(--teal); font-size: 14px; }
+
+.fc1 { top: 20px; right: 0; }
+.fc2 { bottom: 50px; left: -5px; }
+.fc3 { bottom: 5px; right: 10px; }
+
+.mini-sheet { font-family: Consolas, monospace; font-size: 12px; line-height: 1.7; }
+.mini-sheet b { color: var(--teal); }
+
+/* ---------- COMMON ---------- */
+
+.sec-head { text-align: center; margin-bottom: 45px; }
+
+.sec-head .tag {
+    color: var(--teal);
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 22px;
 }
 
-h1 {
-    font-size: clamp(42px, 5.5vw, 66px);
-    line-height: 1.13;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -1.5px;
-}
+h2 { font-size: clamp(28px, 4vw, 38px); margin-top: 6px; }
+h2 span { color: var(--teal); }
 
-h1 span { color: #43d6c5; }
+.sec-head p { color: var(--muted); max-width: 620px; margin: 10px auto 0; }
 
-.hero-title {
-    font-size: clamp(19px, 2.3vw, 26px);
-    font-weight: 600;
-    color: #dce8f5;
-    margin-bottom: 18px;
-}
-
-.hero-description {
-    color: #bac8d9;
-    font-size: 16px;
-    line-height: 1.9;
-    max-width: 570px;
-}
-
-.buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 32px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-    border-radius: 7px;
-    background: #43d6c5;
-    color: #07131d;
-    font-size: 14px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: #6aebdc;
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    background: transparent;
-    color: #43d6c5;
-    border: 1px solid #43d6c5;
-}
-
-.btn-outline:hover {
-    background: #43d6c5;
-    color: #07131d;
-}
-
-/* MAIN PROFILE PHOTO */
-
-.profile-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-card {
-    width: 100%;
-    max-width: 350px;
-    background: #121f32;
-    padding: 13px;
-    border: 1px solid #29485b;
-    border-radius: 18px;
-    box-shadow: 0 20px 55px rgba(0,0,0,.35);
-}
-
-.profile-photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 440px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 12px;
-}
-
-.profile-info {
-    text-align: center;
-    padding: 15px 5px 7px;
-}
-
-.profile-name {
-    font-size: 21px;
-    font-weight: bold;
-    color: #43d6c5;
-}
-
-.profile-role {
-    color: #bac8d9;
-    font-size: 14px;
-}
-
-/* COMMON SECTIONS */
-
-h2 {
-    font-size: 32px;
-    margin-bottom: 22px;
-}
-
-h2 span { color: #43d6c5; }
-
-.muted { color: #bac8d9; }
+.alt { background: var(--bg2); }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
 }
 
 .card {
-    background: #121f32;
-    border: 1px solid #293b51;
-    border-radius: 12px;
-    padding: 25px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px;
     transition: .3s;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #43d6c5;
+.card:hover { transform: translateY(-5px); border-color: var(--teal); }
+
+.card .icon { font-size: 30px; margin-bottom: 10px; }
+.card h3 { color: var(--teal); margin-bottom: 8px; font-size: 18px; }
+.card p { color: var(--muted); font-size: 15px; }
+
+.status {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    padding: 3px 12px;
+    border-radius: 14px;
+    background: #1b3045;
+    color: #dce9f5;
+    border: 1px solid var(--line);
 }
 
-.card h3 {
-    color: #43d6c5;
-    margin-bottom: 10px;
+/* ---------- ABOUT ---------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-.card p { color: #bac8d9; }
+.about-grid p { color: var(--muted); margin-bottom: 15px; }
 
-.skills {
+.facts { display: grid; gap: 12px; }
+
+.fact {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 18px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
 }
+
+.fact span { color: var(--muted); }
+.fact b { text-align: right; }
+
+/* ---------- SKILLS ---------- */
+
+.skills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
 .skill {
     background: #1b3045;
-    color: #dce9f5;
-    padding: 9px 16px;
+    padding: 10px 20px;
     border-radius: 25px;
     font-size: 14px;
-    border: 1px solid #293b51;
+    border: 1px solid var(--line);
 }
 
-.contact-links {
-    display: grid;
-    gap: 15px;
+.skill em { color: var(--teal); font-style: normal; font-size: 12px; margin-left: 6px; }
+
+/* ---------- JOURNEY ---------- */
+
+.timeline {
+    max-width: 720px;
+    margin: auto;
+    border-left: 2px solid var(--line);
+    padding-left: 28px;
 }
 
-.contact-links a {
-    color: #43d6c5;
-    overflow-wrap: anywhere;
-}
+.t-item { position: relative; margin-bottom: 30px; }
 
-.contact-links a:hover { text-decoration: underline; }
-
-/* CONTACT HEADING AND MEDIUM CIRCULAR PHOTO */
-
-.contact-heading-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    margin-bottom: 22px;
-}
-
-.contact-heading-row h2 {
-    margin-bottom: 0;
-}
-
-.contact-photo {
-    display: block;
-    width: 92px;
-    height: 92px;
-    object-fit: cover;
-    object-position: center;
+.t-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 7px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    border: 2px solid #43d6c5;
-    padding: 2px;
-    margin: 0 auto;
-    box-shadow:
-        0 0 10px rgba(67,214,197,.25),
-        0 0 22px rgba(67,214,197,.10);
-    background: #121f32;
-    image-rendering: auto;
-    visibility: visible;
-    opacity: 1;
+    background: var(--teal);
+    border: 3px solid var(--bg2);
 }
+
+.t-item small { color: var(--teal); font-weight: bold; }
+.t-item h3 { font-size: 18px; margin: 2px 0; }
+.t-item p { color: var(--muted); font-size: 15px; }
+
+/* ---------- CONTACT ---------- */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.contact-links { display: grid; gap: 14px; }
+
+.contact-links .card { padding: 18px 22px; }
+.contact-links a { color: var(--teal); overflow-wrap: anywhere; }
+.contact-links small { display: block; color: var(--muted); }
+
+form { display: grid; gap: 14px; }
+
+input, textarea {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 13px 15px;
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus { outline: none; border-color: var(--teal); }
+
+textarea { min-height: 130px; resize: vertical; }
+
+button.btn { border: none; color: #fff; cursor: pointer; font-family: inherit; }
+
+.note { font-size: 12px; color: var(--muted); }
 
 footer {
     text-align: center;
-    padding: 28px 15px;
+    padding: 30px 15px;
+    background: #050a14;
+    border-top: 1px solid var(--line);
     color: #9eafc4;
-    background: #101c2e;
-    border-top: 1px solid #293b51;
+    font-size: 14px;
 }
 
-/* TABLET */
+/* ---------- TABLET ---------- */
 
-@media(max-width: 850px) {
-    .hero-content {
-        grid-template-columns: 1.1fr .9fr;
-        gap: 25px;
-    }
-
-    .profile-card { max-width: 300px; }
-
-    h1 { font-size: clamp(34px, 5vw, 48px); }
-
-    .hero-description { font-size: 15px; }
-}
-
-/* MOBILE */
-
-@media(max-width: 600px) {
-    header {
-        padding: 15px 5%;
-        justify-content: center;
-    }
-
+@media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-desc { margin: auto; }
+    .chips, .buttons { justify-content: center; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
     nav {
-        justify-content: center;
-        gap: 13px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: #0a1322;
+        border-bottom: 1px solid var(--line);
     }
+    nav.open { display: flex; }
+    nav a { padding: 14px 6%; border-top: 1px solid var(--line); }
+    .menu-btn { display: block; }
+}
 
-    nav a { font-size: 13px; }
+/* ---------- MOBILE ---------- */
 
-    .container { width: 90%; }
-
-    section { padding: 60px 0; }
-
-    .hero {
-        min-height: auto;
-        padding: 45px 0;
-    }
-
-    .hero-content {
-        grid-template-columns: 1.05fr .85fr;
-        gap: 12px;
-        align-items: center;
-    }
-
-    .hero-text {
-        text-align: left;
-        min-width: 0;
-    }
-
-    .eyebrow {
-        font-size: 9px;
-        letter-spacing: 1px;
-        margin-bottom: 12px;
-    }
-
-    h1 {
-        font-size: clamp(27px, 7.5vw, 36px);
-        line-height: 1.15;
-        letter-spacing: -1px;
-        margin-bottom: 12px;
-    }
-
-    .hero-title {
-        font-size: 15px;
-        line-height: 1.4;
-        margin-bottom: 12px;
-    }
-
-    .hero-description {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    .buttons {
-        gap: 8px;
-        margin-top: 18px;
-    }
-
-    .buttons .btn {
-        padding: 10px 11px;
-        font-size: 11px;
-    }
-
-    .profile-area { justify-content: center; }
-
-    .profile-card {
-        max-width: 100%;
-        padding: 7px;
-        border-radius: 12px;
-    }
-
-    .profile-photo {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-fit: contain;
-    }
-
-    .profile-info { padding: 9px 2px 4px; }
-
-    .profile-name { font-size: 14px; }
-
-    .profile-role { font-size: 10px; }
-
-    h2 { font-size: 28px; }
-
-    .card { padding: 20px; }
-
-    .contact-heading-row {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
-    }
-
-    .contact-heading-row h2 { font-size: 24px; }
-
-    .contact-photo {
-        width: 72px;
-        height: 72px;
-    }
+@media (max-width: 600px) {
+    section { padding: 65px 0; }
+    .hero { padding: 50px 0 60px; }
+    .hire-btn { display: none; }
+    .photo-ring { width: 240px; height: 240px; }
+    .photo-area { min-height: 330px; }
+    .fc1 { top: 0; right: 0; }
+    .fc2 { bottom: 35px; left: 0; }
+    .fc3 { display: none; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-    <div class="logo">YASIN MONDAL</div>
+    <div class="container nav-wrap">
+        <a href="#home" class="logo">
+            <div class="logo-box">YM</div>
+            <div class="logo-text">
+                <strong>Yasin Mondal</strong>
+                <small>Data Entry & Excel</small>
+            </div>
+        </a>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav id="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#journey">Journey</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="#contact" class="hire-btn">Hire Me &rarr;</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+        </div>
+    </div>
 </header>
 
 <main>
 
+<!-- ================= HOME ================= -->
 <section class="hero" id="home">
-    <div class="container hero-content">
+    <div class="container hero-grid">
 
-        <div class="hero-text">
-            <p class="eyebrow">Welcome to my portfolio</p>
+        <div>
+            <div class="badge"><span class="dot"></span> Open to beginner-level projects</div>
 
-            <h1>I am <span>Yasin Mondal</span></h1>
+            <p class="hello">Hello, I'm</p>
+            <h1>Yasin Mondal</h1>
 
-            <h2 class="hero-title">
-                Entry-Level Data Entry Assistant
-            </h2>
+            <p class="role">I am a <span id="typed">Data Entry Assistant</span></p>
 
-            <p class="hero-description">
-                I am developing practical skills in Data Entry,
-                Microsoft Excel, Google Sheets and E-commerce
-                Data Support. I believe in accuracy, continuous
-                learning and professional growth.
+            <p class="hero-desc">
+                I type data carefully and organize it neatly in Excel and Google Sheets.
+                I am a beginner, I check my work twice, and I keep learning every day.
             </p>
+
+            <div class="chips">
+                <span class="chip c1">Data Entry</span>
+                <span class="chip c2">Excel</span>
+                <span class="chip c3">Google Sheets</span>
+                <span class="chip c4">PDF to Excel (learning)</span>
+                <span class="chip c5">Formatting</span>
+            </div>
 
             <div class="buttons">
-                <a class="btn" href="#portfolio">Explore My Work</a>
-                <a class="btn btn-outline" href="#contact">Contact Me</a>
+                <a class="btn btn-main" href="#portfolio">View My Work &rarr;</a>
+                <a class="btn btn-line" href="#contact">Let's Talk</a>
             </div>
         </div>
 
-        <div class="profile-area">
-            <div class="profile-card">
-                <img src="profile.jpg" alt="Yasin Mondal" class="profile-photo">
+        <div class="photo-area">
+            <div class="photo-ring">
+                <img src="profile.jpg" alt="Yasin Mondal">
+            </div>
 
-                <div class="profile-info">
-                    <p class="profile-name">Yasin Mondal</p>
-                    <p class="profile-role">Data Entry & Excel Learner</p>
-                </div>
+            <div class="float-card fc1 mini-sheet">
+                <b>Name</b> | <b>Age</b> | <b>City</b><br>
+                Yasin | 22 | Nadia
+            </div>
+
+            <div class="float-card fc2">
+                <strong>Accuracy First</strong>
+                I check every entry twice
+            </div>
+
+            <div class="float-card fc3">
+                <strong>Learning Daily</strong>
+                Excel &amp; Sheets
             </div>
         </div>
 
     </div>
 </section>
 
-<section id="about">
+<!-- ================= ABOUT ================= -->
+<section id="about" class="alt">
     <div class="container">
-        <h2>About <span>Me</span></h2>
+        <div class="sec-head">
+            <p class="tag">About</p>
+            <h2>About <span>Me</span></h2>
+        </div>
 
-        <p class="muted">
-            I am an aspiring Data Entry Assistant from Nadia,
-            West Bengal, India. I am at the beginning of my
-            professional journey and improving my skills through
-            regular practice. My current learning focuses on
-            spreadsheet data entry, formatting and organizing
-            information. I am interested in supporting e-commerce
-            and online business tasks as I continue to build my experience.
-        </p>
-    </div>
-</section>
+        <div class="about-grid">
+            <div>
+                <p>
+                    I am a 22-year-old beginner freelancer from Nadia, West Bengal, India.
+                    I work from home and I am building my skills step by step in Data Entry,
+                    Microsoft Excel and Google Sheets.
+                </p>
+                <p>
+                    I am honest about where I am: I am new, so I do not have many client
+                    projects yet. What I offer is careful work, clear communication and
+                    a strong wish to learn and improve.
+                </p>
+                <p>
+                    My goal is to become a reliable professional and earn through honest work.
+                </p>
+            </div>
 
-<section id="skills">
-    <div class="container">
-        <h2>My <span>Skills</span></h2>
-
-        <div class="skills">
-            <span class="skill">Data Entry</span>
-            <span class="skill">Microsoft Excel - Basic</span>
-            <span class="skill">Google Sheets - Basic</span>
-            <span class="skill">Spreadsheet Formatting</span>
-            <span class="skill">Data Organization</span>
-            <span class="skill">PDF Conversion - Learning</span>
-            <span class="skill">E-commerce Data Support - Learning</span>
+            <div class="facts">
+                <div class="fact"><span>Location</span><b>Nadia, West Bengal, India</b></div>
+                <div class="fact"><span>Level</span><b>Beginner</b></div>
+                <div class="fact"><span>Languages</span><b>Bengali, Hindi (basic), English (learning)</b></div>
+                <div class="fact"><span>Work style</span><b>Remote, from home</b></div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="portfolio">
+<!-- ================= SERVICES ================= -->
+<section id="services">
     <div class="container">
-        <h2>Practice <span>Portfolio</span></h2>
-
-        <p class="muted" style="margin-bottom:25px">
-            These are practice areas from my personal learning journey.
-            They are not paid client projects.
-        </p>
+        <div class="sec-head">
+            <p class="tag">What I Can Do</p>
+            <h2>My <span>Services</span></h2>
+            <p>Simple, careful work for small tasks. I am happy to do a small sample first.</p>
+        </div>
 
         <div class="grid">
-
             <div class="card">
-                <h3>Excel Data Entry</h3>
-                <p>
-                    Practice entering and organizing information
-                    in spreadsheet tables.
-                </p>
+                <div class="icon">&#9000;</div>
+                <h3>Data Entry</h3>
+                <p>Typing data from images, documents and PDFs into clean tables.</p>
+                <span class="status">Available</span>
             </div>
 
             <div class="card">
+                <div class="icon">&#128202;</div>
+                <h3>Excel &amp; Google Sheets</h3>
+                <p>Basic tables, sorting and organizing information neatly.</p>
+                <span class="status">Basic level</span>
+            </div>
+
+            <div class="card">
+                <div class="icon">&#127912;</div>
                 <h3>Data Formatting</h3>
-                <p>
-                    Practice arranging spreadsheet information
-                    in a clear and readable format.
-                </p>
+                <p>Making messy sheets clean, consistent and easy to read.</p>
+                <span class="status">Learning</span>
             </div>
 
             <div class="card">
-                <h3>Google Sheets</h3>
-                <p>
-                    Learning spreadsheet organization and
-                    basic data management.
-                </p>
+                <div class="icon">&#128196;</div>
+                <h3>PDF to Excel</h3>
+                <p>Moving information from PDF files into spreadsheets.</p>
+                <span class="status">Learning</span>
             </div>
 
             <div class="card">
-                <h3>E-commerce Data</h3>
-                <p>
-                    Learning product records, order information
-                    and inventory data support.
-                </p>
+                <div class="icon">&#128722;</div>
+                <h3>E-commerce Data Support</h3>
+                <p>Product lists, order records and simple inventory sheets.</p>
+                <span class="status">Learning</span>
             </div>
-
         </div>
     </div>
 </section>
 
-<section id="journey">
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="alt">
     <div class="container">
-        <h2>My Learning <span>Journey</span></h2>
+        <div class="sec-head">
+            <p class="tag">Skills</p>
+            <h2>My <span>Skills</span></h2>
+        </div>
 
-        <div class="card">
-            <h3>Education</h3>
-            <p class="muted">
-                Madhyamik, West Bengal Board of Madrasah Education - 2022
-            </p>
-
-            <br>
-
-            <h3>Languages</h3>
-            <p class="muted">
-                Bengali - Native | Hindi - Basic | English - Beginner
-            </p>
-
-            <br>
-
-            <h3>My Goal</h3>
-            <p class="muted">
-                To become a skilled and reliable professional
-                through continuous learning, practical experience
-                and honest work.
-            </p>
+        <div class="skills">
+            <span class="skill">Data Entry <em>Active</em></span>
+            <span class="skill">Typing <em>Active</em></span>
+            <span class="skill">Microsoft Excel <em>Basic</em></span>
+            <span class="skill">Google Sheets <em>Basic</em></span>
+            <span class="skill">Spreadsheet Organization <em>Basic</em></span>
+            <span class="skill">Data Formatting <em>Learning</em></span>
+            <span class="skill">PDF to Excel <em>Learning</em></span>
+            <span class="skill">Attention to Detail <em>Strength</em></span>
+            <span class="skill">Honest Communication <em>Strength</em></span>
         </div>
     </div>
 </section>
 
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio">
+    <div class="container">
+        <div class="sec-head">
+            <p class="tag">Portfolio</p>
+            <h2>Practice <span>Work</span></h2>
+            <p>These are my own practice files, not paid client projects.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Contact List Sheet</h3>
+                <p>A clean table with name, age, city and phone columns, built for practice.</p>
+                <span class="status">Sample coming soon</span>
+            </div>
+
+            <div class="card">
+                <h3>Product Stock Sheet</h3>
+                <p>A simple product and stock record for a small shop.</p>
+                <span class="status">Sample coming soon</span>
+            </div>
+
+            <div class="card">
+                <h3>PDF to Excel Practice</h3>
+                <p>Moving a table from a PDF into a clean Excel sheet.</p>
+                <span class="status">Sample coming soon</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section id="journey" class="alt">
+    <div class="container">
+        <div class="sec-head">
+            <p class="tag">Journey</p>
+            <h2>My Learning <span>Journey</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="t-item">
+                <small>2022</small>
+                <h3>Madhyamik (Class 10)</h3>
+                <p>West Bengal Board of Madrasah Education.</p>
+            </div>
+
+            <div class="t-item">
+                <small>2026</small>
+                <h3>Started Freelancing Skills</h3>
+                <p>Began learning Data Entry, Excel and Google Sheets step by step.</p>
+            </div>
+
+            <div class="t-item">
+                <small>2026</small>
+                <h3>Created Online Profiles</h3>
+                <p>Set up freelancer profiles and started looking for my first small projects.</p>
+            </div>
+
+            <div class="t-item">
+                <small>Next</small>
+                <h3>First Client Project</h3>
+                <p>Goal: deliver careful work, collect an honest review and grow from there.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
 <section id="contact">
     <div class="container">
-
-        <div class="contact-heading-row">
+        <div class="sec-head">
+            <p class="tag">Contact</p>
             <h2>Let's <span>Connect</span></h2>
-
-            <img
-                src="profile.jpg"
-                alt="Yasin Mondal"
-                class="contact-photo"
-            >
-
-            <div aria-hidden="true"></div>
+            <p>Have a small data entry task? Send me a message.</p>
         </div>
 
-        <p class="muted" style="margin-bottom:22px">
-            Feel free to connect with me through the links below.
-        </p>
+        <div class="contact-grid">
 
-        <div class="contact-links">
+            <div class="contact-links">
+                <div class="card">
+                    <small>Email</small>
+                    <a href="mailto:yasinmondal7868@gmail.com">yasinmondal7868@gmail.com</a>
+                </div>
 
-            <p>
-                Email:
-                <a href="mailto:yasinmondal7868@gmail.com">
-                    yasinmondal7868@gmail.com
-                </a>
-            </p>
+                <div class="card">
+                    <small>LinkedIn</small>
+                    <a href="https://www.linkedin.com/in/yasin-mondal-002207449/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+                </div>
 
-            <p>
-                LinkedIn:
-                <a href="https://www.linkedin.com/in/yasin-mondal-002207449/"
-                   target="_blank" rel="noopener noreferrer">
-                    View LinkedIn Profile
-                </a>
-            </p>
+                <div class="card">
+                    <small>Freelancer</small>
+                    <a href="https://www.freelancer.in/u/DataEntryYasin85" target="_blank" rel="noopener noreferrer">View Freelancer Profile</a>
+                </div>
+            </div>
 
-            <p>
-                Freelancer:
-                <a href="https://www.freelancer.in/u/DataEntryYasin85"
-                   target="_blank" rel="noopener noreferrer">
-                    View Freelancer Profile
-                </a>
-            </p>
+            <form action="mailto:yasinmondal7868@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="Name" placeholder="Your name" required>
+                <input type="email" name="Email" placeholder="Your email" required>
+                <textarea name="Message" placeholder="Tell me about your task" required></textarea>
+                <button type="submit" class="btn btn-main">Send Message</button>
+                <p class="note">This opens your email app. You can also email me directly.</p>
+            </form>
 
         </div>
     </div>
@@ -644,9 +743,50 @@ footer {
 </main>
 
 <footer>
-    <p>© 2026 Yasin Mondal. All rights reserved.</p>
+    <p>&copy; 2026 Yasin Mondal. All rights reserved.</p>
     <p>Learning Today. Improving Every Day.</p>
 </footer>
+
+<script>
+    // Mobile menu
+    var menuBtn = document.getElementById("menuBtn");
+    var menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", function () {
+        menu.classList.toggle("open");
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            menu.classList.remove("open");
+        });
+    });
+
+    // Changing role text
+    var roles = [
+        "Data Entry Assistant",
+        "Excel Learner",
+        "Google Sheets Learner",
+        "Careful Typist"
+    ];
+    var typed = document.getElementById("typed");
+    var r = 0, c = 0, deleting = false;
+
+    function tick() {
+        var word = roles[r];
+        if (!deleting) {
+            c++;
+            typed.textContent = word.substring(0, c);
+            if (c === word.length) { deleting = true; setTimeout(tick, 1400); return; }
+        } else {
+            c--;
+            typed.textContent = word.substring(0, c);
+            if (c === 0) { deleting = false; r = (r + 1) % roles.length; }
+        }
+        setTimeout(tick, deleting ? 45 : 85);
+    }
+    tick();
+</script>
 
 </body>
 </html>
